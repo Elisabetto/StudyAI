@@ -2,7 +2,7 @@ const formularioAuth = document.querySelector(".auth-formulario")
 const botonCerrarSesion = document.querySelector(".cerrar-sesion");
 
 //=============Inicio==============
-if (window.location.pathname.includes("register.html") && formularioAuth) {
+if (window.location.pathname.includes("register") && formularioAuth) {
 
     formularioAuth.addEventListener(
         "submit",
@@ -11,7 +11,7 @@ if (window.location.pathname.includes("register.html") && formularioAuth) {
 
 }
 
-if (window.location.pathname.includes("login.html") && formularioAuth) {
+if (window.location.pathname.includes("login") && formularioAuth) {
 
     formularioAuth.addEventListener(
         "submit",
