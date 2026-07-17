@@ -41,7 +41,7 @@ async function registrarUsuario(e) {
             return;
         }
 
-        const { error } = await supabaseClient.auth.signUp({
+        const { data, error } = await supabaseClient.auth.signUp({
             email: correo,
             password: contrasena, 
             options: {
@@ -66,7 +66,7 @@ async function iniciarSesion(e) {
     const correo = document.getElementById("correo").value.trim();
     const contrasena = document.getElementById("contrasena").value;
 
-    const { error } = await supabaseClient.auth.signInWithPassword({
+    const { data, error } = await supabaseClient.auth.signInWithPassword({
             email: correo,
             password: contrasena
         });

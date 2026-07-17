@@ -97,7 +97,7 @@ StudyAI/
 
 La aplicación está disponible en:
 
-https:enlace
+https://stellar-semifreddo-45e965.netlify.app/
 
 ## Instalación
 
