@@ -1,0 +1,66 @@
+/*============Main=============*/
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/*=================Contenedor==============*/
+.auth-contenedor {
+    width: 100%;
+    max-width: 450px;
+    background-color: var(--color-superficie);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+/*=============Título y despcripción=========*/
+.auth-contenedor h1 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.auth-contenedor h2 {
+    text-align: center;
+}
+
+.auth-contenedor p {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/*==============formulario==============*/
+.auth-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/*================Input correo y contraseña==============*/
+.input-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input-grupo label {
+    font-weight: 500;
+}
+
+/*==============Botón===============*/
+.auth-formulario button {
+    width: 100%;
+}
+
+/*================Enlace de abajo==============*/
+.auth-enlace {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.auth-enlace a {
+    color: var(--color-principal);
+    font-weight: 600;
+}

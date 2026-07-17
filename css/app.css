@@ -1,0 +1,109 @@
+/*============Main==============*/
+main {
+    display: flex;
+    min-height: 100vh;
+}
+
+/*================Barra lateral================*/
+nav {
+    width: clamp(130px, 20vw, 250px);
+    background-color: var(--color-superficie);
+    border-right: 1px solid var(--color-borde);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+nav h1 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.nav-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.nav-menu li a {
+    display: block;
+    padding: 0.9rem 1rem;
+    border-radius: 10px;
+}
+
+.nav-menu li a:hover {
+    background-color: var(--color-fondo);
+    color: var(--color-principal);
+}
+
+/*==============Título y contenido===========*/
+.contenido {
+    flex: 1;
+    padding: 3rem;
+}
+
+.contenido h2 {
+    margin-bottom: 2rem;
+}
+
+/*===============Botón de cerrar sesión==============*/
+.cerrar-sesion {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 0.9rem;
+    border-radius: 10px;
+    background-color: var(--color-error);
+    color: white;
+}
+
+.cerrar-sesion:hover {
+    background-color: rgb(103, 21, 21);
+}
+
+/*================Responsive=================*/
+@media (max-width: 900px) {
+    main {
+        flex-direction: column;
+    }
+
+    nav {
+        width: 100%;
+        min-width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--color-borde);
+        padding: 1.5rem 1rem;
+    }
+
+    .nav-menu ul {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .nav-menu li a {
+        padding: 0.8rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .cerrar-sesion {
+        margin-top: 1rem;
+        width: fit-content;
+        align-self: center;
+    }
+
+    .contenido {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        width: 100%;
+    }
+}

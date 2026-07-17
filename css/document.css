@@ -1,0 +1,43 @@
+/*=============Visualizar documento===============*/
+.visualizar-documento {
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    min-height: 400px;
+}
+
+.visualizar-documento iframe {
+    display: block;
+    border: none;
+    border-radius: 8px;
+}
+
+/*===============Resumen================*/
+.resumen {
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.resumen p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/*================Tests===============*/
+.tests {
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.tests button {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}

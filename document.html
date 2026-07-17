@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/document.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <nav>
+            <h1>
+                <a href="dashboard.html">StudyAI</a>
+            </h1>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="dashboard.html">Inicio</a></li>
+                    <li><a href="documents.html">Documentos</a></li>
+                    <li><a href="calendar.html">Calendario</a></li>
+                    <li><a href="profile.html">Perfil</a></li>
+                </ul>
+                <a href="index.html" class="cerrar-sesion">Cerrar sesión</a>
+            </div>
+        </nav>
+        <section class="contenido">
+            <h2 id="titulo-documento">Nombre del documento</h2>
+            <p id="fecha-subida">Subido el:</p>
+            <p id="ultima-modificacion">Última modificación:</p>
+
+            <div class="visualizar-documento">
+                <iframe id="visor-pdf" title="Visor de apuntes PDF" width="100%" height="700"></iframe>
+            </div>
+            <div class="resumen">
+                <h3>Resumen</h3>
+                <p id="texto-resumen">
+                    Todavía no se ha generado ningún resumen.
+                </p>
+                <button id="generar-resumen">Generar resumen</button>
+            </div>
+            <div class="tests">
+                <h3>Tests</h3>
+                <div id="contenido-test">
+                    Todavía no hay ninguna pregunta generada.
+                </div>
+                <button id="generar-test">Generar test</button>
+                <button id="regenerar-test">Regenerar test</button>
+            </div>
+            
+        </section>
+    </main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>   
+<script src="js/auth.guard.js"></script>
+<script src="js/auth.js"></script>
+
+
+<script src="https://unpkg.com/pdfjs-dist@3.11.174/legacy/build/pdf.min.js"></script>
+
+<script src="js/document.js"></script>   
+</body>
+</html>

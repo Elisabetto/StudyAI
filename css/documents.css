@@ -1,0 +1,73 @@
+/*==============Acciones==============*/
+.acciones-documentos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.buscador {
+    flex: 1;
+}
+
+.buscador input {
+    width: 100%;
+}
+
+/*==============Lista de documentos=============*/
+.lista-documentos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.documento {
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(15,23,42,0.06);
+}
+
+.documento h3 {
+    margin-bottom: 0.5rem;
+}
+
+.documento p {
+    margin-bottom: 1rem;
+}
+
+/*===================Modal==================*/
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.activo {
+    display: flex;
+}
+
+.modal-contenido {
+    background: white;
+    width: 500px;
+    max-width: 100%;
+    border-radius: 15px;
+    padding: 2rem;
+    
+}
+
+.modal-contenido h2 {
+    margin-bottom: 1.5rem;
+}
+
+.modal-botones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}

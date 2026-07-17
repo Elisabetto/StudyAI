@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/profile.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <nav>
+            <h1>
+                <a href="dashboard.html">StudyAI</a>
+            </h1>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="dashboard.html">Inicio</a></li>
+                    <li><a href="documents.html">Documentos</a></li>
+                    <li><a href="calendar.html">Calendario</a></li>
+                    <li><a href="profile.html">Perfil</a></li>
+                </ul>
+                <a href="index.html" class="cerrar-sesion">Cerrar sesión</a>
+            </div>
+        </nav>
+        <section class="contenido">
+        <h2>Mi perfil</h2>
+        <div class="informacion-perfil">
+            <h3>Información personal</h3>
+            <h4>Nombre</h4>
+            <p id="nombre-usuario"></p>
+            <h4>Correo electrónico</h4>
+            <p id="correo-usuario"></p>
+            <button id="editar-nombre">Editar nombre</button>
+        </div>
+        <div class="cambiar-contrasena">
+            <h3>Seguridad</h3>
+            <button id="cambiar-contrasena">Cambiar contraseña</button>
+        </div>
+        <div class="modal" id="modal-nombre">
+            <div class="modal-contenido">
+                <h2>Editar nombre</h2>
+                <form id="form-nombre">
+                    <div class="input-grupo">
+                        <label>Nombre</label>
+                        <input type="text" id="nuevo-nombre" required>
+                    </div>
+                    <div class="modal-botones">
+                        <button type="button" id="cancelar-nombre">Cancelar</button>
+                        <button type="submit">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal" id="modal-contrasena">
+            <div class="modal-contenido">
+                <h2>Cambiar contraseña</h2>
+                <form id="form-contrasena">
+                    <div class="input-grupo">
+                        <label>Nueva contraseña</label>
+                        <input type="password" id="nueva-contrasena" required>
+                    </div>
+                    <div class="input-grupo">
+                        <label>Confirmar contraseña</label>
+                        <input type="password" id="confirmar-contrasena" required>
+                    </div>
+
+                    <div class="modal-botones">
+                        <button type="button" id="cancelar-contrasena">Cancelar</button>
+                        <button type="submit">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </section>
+    </main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script> 
+<script src="js/auth.guard.js"></script>
+<script src="js/profile.js"></script>     
+</body>
+</html>
