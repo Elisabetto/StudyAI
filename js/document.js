@@ -4,6 +4,7 @@ const ultimaModificacion = document.getElementById("ultima-modificacion");
 const visorPDF = document.getElementById("visor-pdf");
 const textoResumen = document.getElementById("texto-resumen");
 const botonResumen = document.getElementById("generar-resumen");
+const botonRegenerarResumen = document.getElementById("regenerar-resumen");
 const contenidoTest = document.getElementById("contenido-test");
 const botonTest = document.getElementById("generar-test");
 const botonRegenerarTest = document.getElementById("regenerar-test");
@@ -24,6 +25,8 @@ cargarDocumento();
 
 //=============Eventos===========
 botonResumen.addEventListener("click", generarResumen);
+
+botonRegenerarResumen.addEventListener("click", regenerarResumen);
 
 botonTest.addEventListener("click", generarTest);
 
@@ -144,7 +147,18 @@ documentoActual.resumen = data.respuesta;
 textoResumen.textContent = data.respuesta;
 }
 
+async function regenerarResumen() {
+    documentoActual.resumen = null;
 
+    await supabaseClient
+        .from("documents")
+        .update({
+            resumen: null
+        })
+        .eq("id", documentoActual.id);
+
+    await generarResumen();
+}
 
 async function generarTest() {
 
